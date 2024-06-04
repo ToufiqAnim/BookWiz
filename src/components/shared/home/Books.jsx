@@ -9,7 +9,7 @@ function Books() {
   console.log(searchValue)
   
   useEffect(() => {
-    fetch("https://book-wiz-server.vercel.app/books/")
+    fetch("https://bookwiz-server-1.onrender.com/books/")
       .then((res) => res.json())
       .then((data) => setBooks(data?.slice(0, 6)));
   }, []);

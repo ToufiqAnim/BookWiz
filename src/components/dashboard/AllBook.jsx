@@ -14,7 +14,7 @@ const AllBook = ({ book, onDelete }) => {
   const { _id, name, genre, price, description, image } = book;
 
   const handleDelete = async () => {
-    await fetch(`https://book-wiz-server.vercel.app/books/${_id}`, {
+    await fetch(`https://bookwiz-server-1.onrender.com/books/${_id}`, {
       method: "DELETE",
       headers: {
         "Content-type": "application/json",
@@ -84,7 +84,7 @@ const AllBook = ({ book, onDelete }) => {
   const { _id, name, genre, price, image } = book;
 
   const handleDelete = async () => {
-    await fetch(`https://book-wiz-server.vercel.app/books/${_id}`, {
+    await fetch(`https://bookwiz-server-1.onrender.com/books/${_id}`, {
       method: "DELETE",
       headers: {
         "Content-type": "application/json",
