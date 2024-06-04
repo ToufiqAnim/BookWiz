@@ -2,12 +2,13 @@
 import { initializeApp } from "firebase/app";
 
 const firebaseConfig = {
-  apiKey: "AIzaSyDMf20di7Qfjj77Q9RHHyHQiTwcHrAuhd4",
-  authDomain: "bookwiz-e6d6c.firebaseapp.com",
-  projectId: "bookwiz-e6d6c",
-  storageBucket: "bookwiz-e6d6c.appspot.com",
-  messagingSenderId: "468534476213",
-  appId: "1:468534476213:web:246145621b3cf756606dfc"
+  apiKey: import.meta.env.VITE_apiKey,
+  authDomain: import.meta.env.VITE_authDomain,
+  projectId: import.meta.env.VITE_projectId,
+  storageBucket: import.meta.env.VITE_storageBucket,
+  messagingSenderId: import.meta.env.VITE_messagingSenderId,
+  appId: import.meta.env.VITE_appId,
+
 };
 
 
