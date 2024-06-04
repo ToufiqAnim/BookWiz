@@ -3,6 +3,10 @@ import MainLayout from "../layout/MainLayout";
 import Home from "../pages/Home";
 import Login from "../pages/Login";
 import Register from "../pages/Register";
+import Registration from "../pages/Register";
+import DashboardLayout from "../layout/DashboardLayout";
+import Dashboard from "../pages/Dashboard";
+import Error from "../pages/Error";
 
 const router = createBrowserRouter([
     {
@@ -19,7 +23,7 @@ const router = createBrowserRouter([
           },
           {
             path: 'register',
-            element: <Register />,
+            element: <Registration />,
           },
 /*         {
           path: 'recipe',
@@ -34,36 +38,23 @@ const router = createBrowserRouter([
          */
       ], 
     },
-  /*   {
-      path: '/dashbord',
-      element: (
-        <PrivateRoutes>
-          <Dashbaord />
-        </PrivateRoutes>
-      ),
+    {
+      path: "/dashboard",
+      element: <DashboardLayout />,
+      errorElement: <Error />,
       children: [
-        {
-          index: true,
-          element: <DashboardHome />,
-        },
-        {
-          path: 'manage-recipes',
-          element: <ManageAllRecipe />,
-        },
-        {
-          path: 'add-recipes',
-          element: <AddRecipe />,
-        },
-        {
-          path: 'edit-recipe/:id',
-          element: <EditRecipe />,
-        },
-        {
-          path: 'recipe/:id',
-          element: <RecipeDetails />,
-        },
-      ],
-    }, */
+          {
+              index: true,
+              element: <Dashboard/>
+          },
+          
+      
+          
+          
+      ]
+    },
+    
+    
   ]);
   
   export default router;
