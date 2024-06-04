@@ -5,8 +5,12 @@ import toast from "react-hot-toast";
 import { FiEdit } from "react-icons/fi";
 import { Link } from "react-router-dom";
 import { MdOutlineDelete } from "react-icons/md";
+import { RiFolderInfoLine } from "react-icons/ri";
+
 const AllBook = ({ book, onDelete }) => {
+
   const token = localStorage.getItem("token");
+
   const { _id, name, genre, price, description, image } = book;
 
   const handleDelete = async () => {
@@ -44,9 +48,11 @@ const AllBook = ({ book, onDelete }) => {
     
        
         <div className="flex justify-around">
-          <Link to={`/books/${_id}`} className="btn bg-indigo-500 text-white px-4 py-2 rounded">
-            See details
+        <div className="hover:bg-[#5560d8] duration-300 rounded hover:p-1  flex gap-1 items-center">
+        <Link to={`/books/${_id}`} className=" text-black px-4 py-2 rounded hover:text-white text-xl">
+           <RiFolderInfoLine/>
           </Link>
+        </div>
          <div className="hover:bg-[#55ee7b] duration-300 rounded hover:p-1  flex gap-1 items-center">
          <Link to={`edit/${_id}`} className=" text-black px-4 py-2 rounded text-xl hover:text-white">
           <FiEdit />

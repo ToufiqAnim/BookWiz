@@ -14,50 +14,42 @@ const Dashboard = () => {
 
   console.log(userInfo);
   return (
- 
-    // </div>
-    <div className="overflow-x-auto">
-  <table className="table">
 
-    <thead className="text-center">
-      <tr>
-        <th>Name</th>
-        <th>Email</th>
-      
-        <th>Action</th>
-      </tr>
-    </thead>
-    <tbody>
-
-      <tr>
-        <td>
-          <div className="flex items-center gap-3">
-            
-            <div>
-              <div className="font-bold">{userInfo?.name}</div>
-              <div className="text-sm opacity-50">Age: {userInfo?.age} </div>
+    <div className=" p-10 container border border-gray-200 rounded-lg shadow-lg mx-auto ">
+      <div className="grid grid-cols-1 md:grid-cols-3 gap-6 items-center">
+        <div className="flex  mb-6 md:mb-0">
+          <div className="avatar">
+            <div className="bg-neutral text-neutral-content rounded-full w-32 h-32">
+              {user?.photoURL ? (
+                <img
+                  src={user?.photoURL}
+                  alt="User"
+                  className="w-full h-full object-cover rounded-full"
+                />
+              ) : (
+                <span className="text-xs text-center">{user?.displayName}</span>
+              )}
             </div>
           </div>
-        </td>
-        <td>
-          {userInfo?.email}
-          <br/>
-        </td>
-    
-        <th>
+        </div>
+        <div className="text-center md:text-left md:col-span-2">
+          <h2 className="text-2xl font-bold">{user?.displayName}</h2>
+
+          <div className="text-gray-600">
+            <p>Email: {user?.email}</p>
+       
+            <p>Phone: +123 456 7890</p>
+          </div>
+
           <Link
-          to={`/dashboard/profile/edit/${userInfo?._id}`}
-          className="btn btn-ghost btn-xs"
-        >
-          Edit Profile
-        </Link>
-        </th>
-      </tr>
-      
-    </tbody>
-    
-  </table>
-</div>
+            to={`/dashboard/profile/edit/${userInfo?._id}`}
+            className="btn rounded-none text-white bg-slate-500 hover:bg-slate-600 mt-2"
+          >
+            Edit Profile
+          </Link>
+        </div>
+      </div>
+    </div>
   );
 };
 

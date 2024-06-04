@@ -12,6 +12,8 @@ import AddBooks from "../components/dashboard/AddBooks";
 import Books from "../components/shared/home/Books";
 import BooksDetails from "../pages/BookDetails";
 import AllBooks from "../components/dashboard/AllBooks";
+import EditBook from "../components/dashboard/EditBook";
+import EditProfile from "../components/dashboard/EditProfie";
 
 const router = createBrowserRouter([
     {
@@ -73,8 +75,28 @@ const router = createBrowserRouter([
               <AllBooks/>
             </PrivateRoute>
           ),
+      },{
+      path: "profile/edit/:id",
+      element: (
+        <PrivateRoute>
+          <EditProfile />
+        </PrivateRoute>
+      ),
+      loader: ({ params }) =>
+        fetch(
+          `http://localhost:3000/user/get/${params.id}`
+        ),
+    },
+      {
+        path: "all-books/edit/:id",
+        element: (
+          <PrivateRoute>
+            <EditBook />
+          </PrivateRoute>
+        ),
+        loader: ({ params }) =>
+          fetch(`http://localhost:3000/books/${params.id}`),
       },
-      
           
           
       ]
