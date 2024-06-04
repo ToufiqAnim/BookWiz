@@ -72,7 +72,7 @@ const Navbar = () => {
           <div className="navbar-end flex gap-4">
             <div className="avatar placeholder">
               <div className="bg-neutral text-neutral-content rounded-full w-full">
-                <small className="p-2">{user?.email}</small>
+                <small className="p-2">{user?.displayName}</small>
               </div>
             </div>
             <div>

@@ -9,6 +9,9 @@ import Dashboard from "../pages/Dashboard";
 import Error from "../pages/Error";
 import PrivateRoute from "./PrivateRoutes";
 import AddBooks from "../components/dashboard/AddBooks";
+import Books from "../components/shared/home/Books";
+import BooksDetails from "../pages/BookDetails";
+import AllBooks from "../components/dashboard/AllBooks";
 
 const router = createBrowserRouter([
     {
@@ -27,11 +30,17 @@ const router = createBrowserRouter([
             path: 'register',
             element: <Registration />,
           },
-/*         {
-          path: 'recipe',
-          element: <Recipe />,
+        {
+          path: 'books',
+          element: <Books />,
         },
-  
+        {
+          path: "/books/:id",
+          element: <BooksDetails />,
+          loader: ({ params }) =>
+            fetch(`http://localhost:3000/books/${params.id}`),
+      },
+  /* 
         {
           path: 'contact',
           element: <Contact />,
@@ -57,6 +66,14 @@ const router = createBrowserRouter([
               </PrivateRoute>
             ),
         },
+        {
+          path: "all-books",
+          element: (
+            <PrivateRoute>
+              <AllBooks/>
+            </PrivateRoute>
+          ),
+      },
       
           
           
