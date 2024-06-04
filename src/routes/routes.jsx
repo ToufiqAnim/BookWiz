@@ -7,6 +7,8 @@ import Registration from "../pages/Register";
 import DashboardLayout from "../layout/DashboardLayout";
 import Dashboard from "../pages/Dashboard";
 import Error from "../pages/Error";
+import PrivateRoute from "./PrivateRoutes";
+import AddBooks from "../components/dashboard/AddBooks";
 
 const router = createBrowserRouter([
     {
@@ -47,7 +49,14 @@ const router = createBrowserRouter([
               index: true,
               element: <Dashboard/>
           },
-          
+          {
+            path: "add-books",
+            element: (
+              <PrivateRoute>
+                <AddBooks />
+              </PrivateRoute>
+            ),
+        },
       
           
           

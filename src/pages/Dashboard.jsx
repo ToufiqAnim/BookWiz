@@ -19,12 +19,12 @@ const Dashboard = () => {
     <div className="overflow-x-auto">
   <table className="table">
 
-    <thead>
+    <thead className="text-center">
       <tr>
         <th>Name</th>
         <th>Email</th>
-        <th>Mobile Number</th>
-        <th></th>
+      
+        <th>Action</th>
       </tr>
     </thead>
     <tbody>
@@ -43,7 +43,7 @@ const Dashboard = () => {
           {userInfo?.email}
           <br/>
         </td>
-        <td>{userInfo?.mobileNumber}</td>
+    
         <th>
           <Link
           to={`/dashboard/profile/edit/${userInfo?._id}`}
