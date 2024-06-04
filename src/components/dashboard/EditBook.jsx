@@ -33,7 +33,7 @@ const EditBook = () => {
   const confirmEdit = async (data) => {
     const answer = window.confirm("Are you sure to Edit this Book?");
     if (answer) {
-      await fetch(`http://localhost:3000/books/${books._id}`, {
+      await fetch(`https://book-wiz-server.vercel.app/books/${books._id}`, {
         method: "PATCH",
         headers: {
           "Content-type": "application/json",

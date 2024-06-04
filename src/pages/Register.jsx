@@ -33,7 +33,7 @@ const Registration = () => {
             email: data?.user?.email,
             name: name,
           };
-         fetch("http://localhost:3000/user", {
+         fetch("https://book-wiz-server.vercel.app/user", {
             method: "POST",
             headers: {
               "Content-Type": "application/json",

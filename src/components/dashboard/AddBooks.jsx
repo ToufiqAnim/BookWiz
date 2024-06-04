@@ -22,7 +22,7 @@ const AddBooks = () => {
   const completeAddBooks = async (data, form) => {
     const answer = window.confirm("Are you sure you want to add this product?");
     if (answer) {
-      await fetch("http://localhost:3000/books", {
+      await fetch("https://book-wiz-server.vercel.app/books", {
         method: "POST",
         headers: {
           "Content-type": "application/json",
@@ -55,58 +55,7 @@ const AddBooks = () => {
       </div>
       <h1 className="text-4xl mb-8">Add Book</h1>
 
-      {/*    <form onSubmit={handleSubmit} className="w-full border p-10">
-    
-      <div className="mb-4">
-        <label htmlFor="">Name </label>
-        <input
-          type="text"
-          name="name"
-          className="w-full py-3 px-5 border bg-white text-black"
-        />
-      </div>
-      <div className="mb-4">
-        <label htmlFor="">genre </label>
-        <input
-          type="text"
-          name="genre"
-          className="w-full py-3 px-5 border bg-white text-black"
-        />
-      </div>
-      <div className="mb-4">
-        <label htmlFor="">Price </label>
-        <input
-          type="number"
-          name="price"
-          className="w-full py-3 px-5 border bg-white text-black"
-        />
-      </div>
- 
-
-      <div className="mb-4">
-        <label htmlFor="">Description </label>
-        <textarea
-        type="text"
-          name="description"
-          className="w-full py-3 px-5 border bg-white text-black"
-        />
-      </div>
-      <div className="mb-4">
-        <label htmlFor="">ImgURL </label>
-        <textarea
-          name="ImgURL"
-          className="w-full py-3 px-5 border bg-white text-black"
-        />
-      </div>
-
-      <div className="mb-4">
-        <input
-          type="submit"
-          value={'Add Book'}
-          className="w-full btn py-3 px-5 border btn-neutral text-white border-slate-300"
-        />
-      </div>
-    </form> */}
+   
       <form onSubmit={handleSubmit} className="space-y-4">
         <input
           className="input input-bordered w-full p-4 -md text-md  "

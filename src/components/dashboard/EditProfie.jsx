@@ -18,7 +18,7 @@ export default function EditProfile() {
       name,
       age,
       mobileNumber,
-      //   email: data?.email,
+      
     };
 
     fetch(`http://localhost:3000/user/${data?.email}`, {
@@ -37,11 +37,11 @@ export default function EditProfile() {
   };
 
   return (
-    <div className="flex justify-center items-center h-screen bg-gray-100">
+    <div className="flex justify-center items-center h-screen ">
       <div className="bg-white p-8 rounded-lg shadow-lg max-w-md w-full">
         <h1 className="text-3xl mb-7">Edit Profile</h1>
 
-        <form onSubmit={handleSubmit} className="space-y-4">
+        <form onSubmit={handleSubmit} className="space-y-4 w-96">
           <div className="flex flex-col">
             <label
               htmlFor="name"
@@ -53,7 +53,7 @@ export default function EditProfile() {
               type="text"
               name="name"
               defaultValue={data?.name}
-              className="py-2 px-3 border rounded-md focus:outline-none focus:border-blue-500"
+              className="py-2 px-3 border rounded-md focus:outline-none"
             />
           </div>
           <div className="flex flex-col">
@@ -81,7 +81,7 @@ export default function EditProfile() {
             <input
               type="text"
               name="age"
-              className="py-2 px-3 border rounded-md focus:outline-none focus:border-blue-500"
+              className="py-2 px-3 border rounded-md focus:outline-none "
             />
           </div>
           <div className="flex flex-col">
@@ -94,7 +94,7 @@ export default function EditProfile() {
             <input
               type="text"
               name="mobileNumber"
-              className="py-2 px-3 border rounded-md focus:outline-none focus:border-blue-500"
+              className="py-2 px-3 border rounded-md focus:outline-none "
             />
           </div>
           <div className="flex items-center justify-center">
