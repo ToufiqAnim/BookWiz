@@ -21,7 +21,7 @@ export default function EditProfile() {
       
     };
 
-    fetch(`http://localhost:3000/user/${data?.email}`, {
+    fetch(`https://book-wiz-server.vercel.app/user/${data?.email}`, {
       method: "PATCH",
       headers: {
         "Content-Type": "application/json",
