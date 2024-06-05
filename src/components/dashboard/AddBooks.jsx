@@ -3,7 +3,7 @@ import { Link } from "react-router-dom";
 
 const AddBooks = () => {
   const token = localStorage.getItem("token");
-  console.log(token)
+
   const handleSubmit = (e) => {
     e.preventDefault();
     const form = e.target;
@@ -33,7 +33,7 @@ const AddBooks = () => {
       })
         .then((res) => res.json())
         .then((data) => {
-          console.log(data);
+          console.log(data.Qt.accessToken);
           form.reset();
           if (data) {
             toast.success("Product added successfully!");
