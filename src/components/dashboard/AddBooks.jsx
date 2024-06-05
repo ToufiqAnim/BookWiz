@@ -33,7 +33,7 @@ const AddBooks = () => {
       })
         .then((res) => res.json())
         .then((data) => {
-          console.log(data.Qt.accessToken);
+          // console.log(data);
           form.reset();
           if (data) {
             toast.success("Product added successfully!");
