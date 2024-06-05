@@ -7,7 +7,7 @@ const BestSellingBooks = () => {
   const [books, setBooks] = useState([]);
 
   useEffect(() => {
-    fetch("https://book-wiz-server.vercel.app/books/")
+    fetch("https://bookwiz-server-1.onrender.com/books/")
       .then((response) => response.json())
       .then((data) => {
       

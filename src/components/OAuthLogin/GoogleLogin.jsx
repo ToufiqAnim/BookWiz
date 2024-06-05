@@ -12,7 +12,7 @@ const GoogleLogin = () => {
           name: data?.user?.displayName,
         };
         console.log(userInfo)
-         fetch("https://book-wiz-server.vercel.app/user", {
+         fetch("https://bookwiz-server-1.onrender.com/user", {
           method: "POST",
           headers: {
             "Content-Type": "application/json",

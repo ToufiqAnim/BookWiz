@@ -33,7 +33,7 @@ const EditBook = () => {
   const confirmEdit = async (data) => {
     const answer = window.confirm("Are you sure to Edit this Book?");
     if (answer) {
-      await fetch(`https://book-wiz-server.vercel.app/books/${books._id}`, {
+      await fetch(`https://bookwiz-server-1.onrender.com/books/${books._id}`, {
         method: "PATCH",
         headers: {
           "Content-type": "application/json",
