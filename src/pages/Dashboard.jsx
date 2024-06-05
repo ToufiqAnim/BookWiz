@@ -1,6 +1,10 @@
 import { useEffect, useState } from "react";
 import useAuth from "../hooks/useAuth";
 import { Link } from "react-router-dom";
+import AllBooks from "../components/dashboard/AllBooks";
+import AddBooks from "../components/dashboard/AddBooks";
+import DashboardItems from "../components/dashboard/DashboardCard";
+import DashboardChart from "../components/dashboard/Chart";
 
 const Dashboard = () => {
   const { user } = useAuth();
@@ -14,7 +18,7 @@ const Dashboard = () => {
 
   console.log(userInfo);
   return (
-
+<div className="flex flex-col">
     <div className=" p-10 container border border-gray-200 rounded-lg shadow-lg mx-auto ">
       <div className="grid grid-cols-1 md:grid-cols-3 gap-6 items-center">
         <div className="flex  mb-6 md:mb-0">
@@ -48,7 +52,12 @@ const Dashboard = () => {
             Edit Profile
           </Link>
         </div>
+    
       </div>
+    
+    </div>
+    <DashboardItems/>
+<AllBooks/>
     </div>
   );
 };

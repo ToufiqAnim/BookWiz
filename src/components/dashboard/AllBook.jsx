@@ -24,6 +24,10 @@ const AllBook = ({ book, onDelete }) => {
         if (_id) {
           toast.success('Product deleted successfully!');
         }
+      })
+      .catch(error => {
+        toast.error('Failed to delete the product');
+        console.error("Error deleting product:", error);
       });
   };
 

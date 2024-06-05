@@ -33,7 +33,7 @@ const AddBooks = () => {
       })
         .then((res) => res.json())
         .then((data) => {
-          // console.log(data);
+          console.log(data);
           form.reset();
           if (data) {
             toast.success("Product added successfully!");
@@ -50,7 +50,7 @@ const AddBooks = () => {
           </li>
 
           <li>
-            <Link to={"/dashbord/manage-recipes"}>Add Book</Link>
+            <Link >Add Book</Link>
           </li>
         </ul>
       </div>
@@ -103,7 +103,7 @@ const AddBooks = () => {
         />
         <div className="flex justify-center">
           <button type="submit" className="btn btn-primary w-full md:w-auto">
-            Add Product
+            Add Book
           </button>
         </div>
       </form>

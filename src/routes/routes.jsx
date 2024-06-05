@@ -14,6 +14,8 @@ import BooksDetails from "../pages/BookDetails";
 import AllBooks from "../components/dashboard/AllBooks";
 import EditBook from "../components/dashboard/EditBook";
 import EditProfile from "../components/dashboard/EditProfie";
+import AboutUs from "../pages/AboutUs";
+import ContactUs from "../pages/ContactUs";
 
 const router = createBrowserRouter([
     {
@@ -42,13 +44,17 @@ const router = createBrowserRouter([
           loader: ({ params }) =>
             fetch(`https://bookwiz-server-1.onrender.com/books/${params.id}`),
       },
-  /* 
+  
+        {
+          path: 'about',
+          element: <AboutUs />,
+        },
         {
           path: 'contact',
-          element: <Contact />,
+          element: <ContactUs />,
         },
-      ,
-         */
+      
+         
       ], 
     },
     {
