@@ -22,7 +22,7 @@ const AddBooks = () => {
   const completeAddBooks = async (data, form) => {
     const answer = window.confirm("Are you sure you want to add this product?");
     if (answer) {
-      await fetch("https://bookwiz-server-1.onrender.com/books", {
+      await fetch("https://book-wiz-server.vercel.app/books", {
         method: "POST",
         headers: {
           "Content-type": "application/json",

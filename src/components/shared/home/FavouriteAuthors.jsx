@@ -10,7 +10,7 @@ const FavouriteAuthors = () => {
     const fetchData = async () => {
       try {
         const response = await fetch(
-          "https://bookwiz-server-1.onrender.com/books/"
+          "https://book-wiz-server.vercel.app/books/"
         );
         const data = await response.json();
         setAuthors(data.slice(2,8));

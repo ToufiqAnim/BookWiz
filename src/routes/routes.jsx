@@ -40,7 +40,7 @@ const router = createBrowserRouter([
           path: "/books/:id",
           element: <BooksDetails />,
           loader: ({ params }) =>
-            fetch(`https://bookwiz-server-1.onrender.com/books/${params.id}`),
+            fetch(`https://book-wiz-server.vercel.app/books/${params.id}`),
       },
   /* 
         {
@@ -84,7 +84,7 @@ const router = createBrowserRouter([
       ),
       loader: ({ params }) =>
         fetch(
-          `https://bookwiz-server-1.onrender.com/user/get/${params.id}`
+          `https://book-wiz-server.vercel.app/user/get/${params.id}`
         ),
     },
       {
@@ -95,7 +95,7 @@ const router = createBrowserRouter([
           </PrivateRoute>
         ),
         loader: ({ params }) =>
-          fetch(`https://bookwiz-server-1.onrender.com/books/${params.id}`),
+          fetch(`https://book-wiz-server.vercel.app/books/${params.id}`),
       },
           
           

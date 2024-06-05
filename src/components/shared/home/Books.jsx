@@ -9,7 +9,7 @@ function Books() {
   console.log(searchValue)
   
   useEffect(() => {
-    fetch("https://bookwiz-server-1.onrender.com/books/")
+    fetch("https://book-wiz-server.vercel.app/books/")
       .then((res) => res.json())
       .then((data) => setBooks(data?.slice(0, 6)));
   }, []);
@@ -48,7 +48,7 @@ function Books() {
   const [years, setYears] = useState([]);
 
   useEffect(() => {
-    fetch("https://bookwiz-server-1.onrender.com/books/")
+    fetch("https://book-wiz-server.vercel.app/books/")
       .then((res) => res.json())
       .then((data) => {
         let slicedBooks = data;
