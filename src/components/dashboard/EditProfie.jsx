@@ -21,7 +21,7 @@ export default function EditProfile() {
       
     };
 
-    fetch(`https://bookwiz-server-1.onrender.com/user/${data?.email}`, {
+    fetch(`https://bookwiz-server-1.onrender.com/user/${data?.email}/`, {
       method: "PATCH",
       headers: {
         "Content-Type": "application/json",

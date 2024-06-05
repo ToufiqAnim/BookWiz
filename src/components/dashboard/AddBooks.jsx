@@ -3,6 +3,7 @@ import { Link } from "react-router-dom";
 
 const AddBooks = () => {
   const token = localStorage.getItem("token");
+  console.log(token)
   const handleSubmit = (e) => {
     e.preventDefault();
     const form = e.target;
