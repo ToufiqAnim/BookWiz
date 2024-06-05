@@ -11,7 +11,7 @@ const EditBook = () => {
   const books = useLoaderData();
   
   const [name, setName] = useState(books.name);
-  const [price, setPrice] = useState(books.price);
+
   const [genre, setGenre] = useState(books.genre);
   const [description, setDescription] = useState(books.description);
   const [image, setImage] = useState(books.image);
@@ -22,11 +22,11 @@ const EditBook = () => {
     const form = e.target;
     const name = form.name.value;
     const genre = form.genre.value;
-    const price = form.price.value;
+  
     const description = form.description.value;
     const image = form.image.value;
 
-    const data = { name,  genre, price, description,  image };
+    const data = { name,  genre,  description,  image };
     confirmEdit(data);
   };
 
@@ -72,14 +72,7 @@ const EditBook = () => {
             value={genre}
             onChange={(e) => setGenre(e.target.value)}
           />
-          <input
-            className="input input-bordered  w-full p-4 rounded-md text-md "
-            type="text"
-            name="price"
-            placeholder="Price"
-            value={price}
-            onChange={(e) => setPrice(e.target.value)}
-          />
+       
           <input
             className="input input-bordered  w-full p-4 rounded-md text-md "
             type="text"

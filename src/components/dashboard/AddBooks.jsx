@@ -11,11 +11,11 @@ const AddBooks = () => {
     const genre = form.genre.value;
     const author = form.genre.value;
     const publicationDate = form.publicationDate.value;
-    const price = form.price.value;
+
     const description = form.description.value;
     const image = form.image.value;
 
-    const data = { name, genre, price, description ,image,author,publicationDate};
+    const data = { name, genre,  description ,image,author,publicationDate};
     completeAddBooks(data, form);
   };
 
@@ -85,13 +85,7 @@ const AddBooks = () => {
           placeholder="Genre"
           required
         />
-        <input
-          className="input input-bordered w-full p-4 -md text-md  "
-          type="text"
-          name="price"
-          placeholder="Price"
-          required
-        />
+     
         <input
           className="input input-bordered w-full p-4 -md text-md "
           type="text"
